@@ -13,7 +13,9 @@ export class MainPageComponent {
   ];
 
   onNewCharacter(character: Character): void {
-    console.log('main page');
-    console.log(character);
+    this.characters = [
+      ...this.characters,
+      { name: character.name, power: character.power },
+    ];
   }
 }
