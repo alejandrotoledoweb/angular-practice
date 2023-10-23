@@ -1,0 +1,17 @@
+<p>list works!</p>
+
+<ul class="mt-2 list-group">
+  <!-- <li>list item</li> -->
+  <li *ngFor="let name of heroNames">{{ name }}</li>
+</ul>
+
+<p>Delete Item:</p>
+<div *ngIf="deletedElement; else nothingDeleted">
+  <p class="font-bold text-danger">{{ deletedElement }}</p>
+</div>
+
+<ng-template #nothingDeleted>
+  <p>No he borrado nada</p>
+</ng-template>
+
+<button *ngIf="heroNames.length > 0" (click)="deleteFirst()">Delete</button>
