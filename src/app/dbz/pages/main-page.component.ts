@@ -18,4 +18,8 @@ export class MainPageComponent {
       { name: character.name, power: character.power },
     ];
   }
+
+  onDeleteId(id: number): void {
+    this.characters.splice(id, 1);
+  }
 }

@@ -1,20 +1,10 @@
 <p>add-character works!</p>
 <form (submit)="emitCharacter()">
-  <input type="text"
-    placeholder="Nombre"
-    [(ngModel)]="character.name"
-    name="name"
-  />
-  <input
-    type="number"
-    placeholder="Poder"
-    [(ngModel)]="character.power"
-    name="power"
-  />
-  <button
-    type="submit">
+  <input type="text" placeholder="Nombre" [(ngModel)]="character.name" name="name" />
+  <input type="number" placeholder="Poder" [(ngModel)]="character.power" name="power" />
+  <button type="submit">
     Agregar
   </button>
 
-  <pre>{{ character | json }}</pre>
+  <!-- <pre>{{ character | json }}</pre> -->
 </form>
