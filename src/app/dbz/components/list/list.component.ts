@@ -16,9 +16,9 @@ export class ListComponent {
   ];
 
   @Output()
-  public onDeleteId: EventEmitter<number> = new EventEmitter();
+  public onDeleteId: EventEmitter<string | undefined> = new EventEmitter();
 
-  onDeleteCharacter(index: number): void {
+  onDeleteCharacter(index: string | undefined): void {
     console.log({ index });
     this.onDeleteId.emit(index);
   }
